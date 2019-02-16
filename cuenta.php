@@ -1,5 +1,5 @@
 <?php require("he_driver/client.php") ?>
-<?
+<?php
 if(!isset($_SESSION['user']))
   header("Location: index.php");
 ?>
