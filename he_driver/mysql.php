@@ -75,7 +75,7 @@ function query($query){
 				case 'SELECT * FROM':
 					$results = $mc->conex->query($query);
 					if($results->num_rows>0){
-						while( $rr = mysqli_fetch_assoc($results) ) $rows[] = $rr;
+						while( $rr = mysqli_fetch_assoc($results) ) $rows[] = (object)$rr;
 					
 						return $rows;
 					}else
@@ -85,7 +85,7 @@ function query($query){
 				case 'SELECT':
 					$results = $mc->conex->query($query);
 					if($results->num_rows>0){
-						while( $rr = mysqli_fetch_assoc($results) ) $rows[] = $rr;
+						while( $rr = mysqli_fetch_assoc($results) ) $rows[] = (object)$rr;
 					
 						return $rows;
 					}else
